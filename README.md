@@ -1,29 +1,103 @@
-SE-WSN — Minimal Executable Template
-====================================
+# SE-WSN: A Self-Evolving Wireless Sensor Network Architecture
+### Integrating Temporal Graph Neural Networks and Multi-Agent Deep Reinforcement Learning
 
-This is a clean, minimal, and executable template for your SE-WSN project
-(temporal graphs + MADDPG + WSN environment), ready for GitHub.
+This repository provides a clean, executable, and minimal implementation of **SE-WSN**,  
+the model proposed in the paper:
 
-Main steps to run:
+> **A Self-Evolving Wireless Sensor Network Architecture Integrating Temporal Graph Neural Networks and Multi-Agent Deep Reinforcement Learning**  
+> Mojtaba Jahanian, Mehdi HosseinZadeh, Hossein Yarahmadi, Maryam Hajiei  
+> (2025)
 
-1. Create venv and install requirements:
+---
 
-   python -m venv venv
-   venv\Scripts\activate
-   pip install -r requirements.txt
+## 📌 Overview
 
-2. Put your Intel dataset file as:
+SE-WSN is a **self-evolving WSN architecture** that integrates:
 
-   data/raw/Xdados.txt
+- Temporal Graph Representation Learning  
+- Temporal Graph Neural Networks (T-GNN)  
+- Multi-Agent Deep Reinforcement Learning (MADDPG)  
+- Castalia-like WSN simulation environment  
 
-3. Build temporal graphs:
+This repository contains a **minimal reproducible template** of the architecture.
 
-   cd data/scripts
-   python preprocess_xdados.py
+---
 
-4. Run training:
+## 🚀 How to Run
 
-   cd ../../src/training
-   python train.py
+### 1. Create virtual environment and install dependencies
 
-Trained models will be saved in results/trained_models/.
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 2. Place dataset
+
+```
+data/raw/Xdados.txt
+```
+
+### 3. Build temporal graphs
+
+```bash
+cd data/scripts
+python preprocess_xdados.py
+```
+
+### 4. Train MADDPG controller
+
+```bash
+cd ../../src/training
+python train.py
+```
+
+Trained models will be saved in:
+
+```
+results/trained_models/
+```
+
+---
+
+## 🗂 Project Structure
+
+```
+SE-WSN/
+  data/
+    raw/
+    processed/graphs/
+    scripts/
+  src/
+    models/
+    maddpg/
+    simulator/
+    training/
+  results/
+    trained_models/
+    logs/
+    figures/
+  README.md
+```
+
+---
+
+## 📝 Citation
+
+```bibtex
+@article{SEWSN2025,
+  title={A Self-Evolving Wireless Sensor Network Architecture Integrating Temporal Graph Neural Networks and Multi-Agent Deep Reinforcement Learning},
+  author={Jahanian, Mojtaba and HosseinZadeh, Mehdi and Yarahmadi, Hossein and Hajiei, Maryam},
+  year={2025},
+}
+```
+
+---
+
+## 👤 Authors
+
+- Mojtaba Jahanian  
+- Mehdi HosseinZadeh  
+- Hossein Yarahmadi  
+- Maryam Hajiei  
